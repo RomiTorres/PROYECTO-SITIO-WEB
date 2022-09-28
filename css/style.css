@@ -40,6 +40,10 @@ img {
     max-width: 100%;
 }
 
+p {
+    margin-bottom: 0.8rem;
+}
+
 /* Hero */
 
 .hero {
@@ -382,6 +386,40 @@ header.transparente nav a:hover {
     align-items: center;
 }
 
+/* Espaciados y márgenes */
+
+.m-t {
+    margin-top: 1rem;
+}
+
+.m-b {
+    margin-bottom: 1rem;
+}
+
+.m-l {
+    margin-left: 1rem;
+}
+
+.m-r {
+    margin-right: 1rem;
+}
+
+.m-t-small {
+    margin-top: 0.5rem;
+}
+
+.m-b-small {
+    margin-bottom: 0.5rem;
+}
+
+.m-l-small {
+    margin-left: 0.5rem;
+}
+
+.m-r-small {
+    margin-right: 0.5rem;
+}
+
 /* Parallax */
 
 .fila.parallax {
@@ -429,6 +467,26 @@ header.transparente nav a:hover {
 }
 
 /* Formulario contacto */
+
+form.contacto {
+    width: 50%;
+}
+
+@media (max-width: 720px) {
+    form.contacto {
+        width: 75%;
+    }
+}
+
+@media (max-width: 440px) {
+    form.contacto {
+        width: 100%;
+    }
+}
+
+form.contacto .fila {
+    padding: 0.8rem;
+}
 
 input {
     border: none;
@@ -487,4 +545,121 @@ input[type="checkbox"] + label::before {
 
 input[type="checkbox"]:checked + label::before {
     content: url("../img/check-square.svg");
+}
+
+/* Footer */
+
+footer {
+    background-color: #424242;
+}
+
+footer p {
+    color: rgb(255, 255, 255, 0.8);
+}
+
+footer p:first-child {
+    color: #a97c50;
+    font-weight: bold;
+}
+
+footer img.rrss {
+    height: 48px;
+}
+
+footer a {
+    font-size: 0.8rem;
+    color: #a97c50;
+    transition: 400ms ease-in-out all;
+    
+}
+
+footer a:hover {
+     color: #71481f;
+}
+
+footes .copyright {
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* Card */
+
+.fila.grid {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px); /* Auto-fit significa que cada columna se adapte al espacio disponible*/
+    grid-gap: 1.5rem;
+    justify-content: center;
+}
+
+.card {
+    width: 360px; /* Esta medida viene bien para tarjetas porq no hay que adaptar a móviles*/
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 4px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card img {
+    height: 320px;
+}
+
+.card .footer-card {
+    padding: 0.8rem;
+    width: 100%;
+    height: 174px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; /* Alineados en el eje de la y a la izq. */
+}
+
+.card .footer-card p {
+    margin-bottom: 0.5rem;
+}
+
+.card .footer-card p:first-child {
+    font-weight: bold;
+}
+
+.card .footer-card a {
+    background-color: #a97c50;
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 0.3em;
+    padding: 0.5em 1em; /* Padding típico botones*/
+    align-self: center;
+    transition: 400ms ease-in-out all;
+}
+
+.card .footer-card a:hover {
+    background-color: #6c4b29;
+    
+}
+
+/* Ficha propiedad */
+
+.propiedad {
+    margin-top: 80px;
+    background-image: url("../img/property5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.propiedad div:first-child {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.propiedad div:first-child h1 {
+    font-size: 1.4rem;
+    color: #a97c50;
+}
+
+.propiedad div:first-child p img {
+    width: 28px;
+    height: 28px;
 }
